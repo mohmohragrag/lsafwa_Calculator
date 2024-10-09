@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,29 +8,21 @@
 </head>
 <body>
     <div class="container">
-        <img src="D:/app_steel/Elsafwa Steel.png" alt="Logo" class="logo"> <!-- إضافة الشعار -->
-        <h1>حاسبة وزن مقاطع الحديد</h1>
-
-        <div id="fields"></div>
-
-        <div id="sectionImageContainer" style="display:none;">
-            <img src="" alt="Section Image" id="sectionImage" />
-        </div>
+        <img src="images/Elsafwa_Steel.png" alt="Logo" class="logo"> <!-- تعديل مسار اللوجو -->
+        <h1>Steel Sections Weight Calculator</h1>
         
-        <div id="hebProfilesContainer" style="display:none;">
-            <label for="hebProfilesHEA">مقاطع HEA:</label>
-            <select id="hebProfilesHEA" onchange="calculateWeight()"></select>
-            <label for="lengthInput">الطول (م):</label>
-            <input type="number" id="lengthInput" value="1" min="1" oninput="calculateWeight()" />
+        <div id="hebProfilesContainer">
+            <label for="hebProfiles">Choose HEB Profile:</label>
+            <select id="hebProfiles" onchange="calculateWeight()"></select>
         </div>
-        
-        <div id="hebProfilesContainer" style="display:none;">
-            <label for="hebProfilesHEB">مقاطع HEB:</label>
-            <select id="hebProfilesHEB" onchange="calculateWeight()"></select>
+
+        <div id="lengthContainer">
+            <label for="length">Enter Length (mm):</label>
+            <input type="number" id="length" placeholder="Length in milli" oninput="calculateWeight()">
         </div>
 
         <div id="result"></div>
-        <img src="D:/app_steel/images/heb.png" alt="صورة إضافية" class="additional-image"> <!-- استخدم مسارًا صحيحًا للصورة -->
+        <img src="images/heb.png" alt="Another Image" class="additional-image"> <!-- استخدم مسارًا صحيحًا للصورة -->
 
         <!-- زر الرجوع إلى الصفحة الرئيسية -->
         <div class="back-button-container">
@@ -40,7 +32,7 @@
 
     <script>
         function goBack() {
-            window.location.href = "file:///D:/app_steel/index.html"; // المسار الخاص بك
+            window.location.href = "https://mohmohragrag.github.io/Elsafwa_Calculator/index.html"; // المسار الخاص بك
         }
     </script>
 
